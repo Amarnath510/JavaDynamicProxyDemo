@@ -50,5 +50,20 @@
       proxy.deleteCustomer("random id");
      ```
 
+  - **Output**
+
+    ```
+    Audit Log Start: saveCustomer
+    Input Values = null
+    Saving Customer.
+    Audit Log End: saveCustomer
+
+    Audit Log Start: deleteCustomer
+    Input Values = [random id]
+    Deleting Customer.
+    Audit Log End: deleteCustomer
+    ```
+
+
 **Credits** <br />
  [Class Proxy](http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Proxy.html)

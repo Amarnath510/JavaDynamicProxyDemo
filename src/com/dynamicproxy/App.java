@@ -15,8 +15,10 @@ public static void main(String[] args) {
 		ClassLoader classLoader = CustomerService.class.getClassLoader();
 		CustomerService proxy = (CustomerService) Proxy.newProxyInstance(classLoader, new Class[] {CustomerService.class}, auditHandler);
 		
+		// call save mthod.
 		proxy.saveCustomer();
 		
+		// call delete method.
 		proxy.deleteCustomer("random id");
 	}
 }
